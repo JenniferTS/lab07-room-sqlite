@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation("androidx.compose.material:material-icons-core") // iconos del TopAppBar
 
     // Room
     implementation("androidx.room:room-runtime:$room_version")
