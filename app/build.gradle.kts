@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.legacy.kapt) // kapt para el compilador de Room
 }
 
 android {
@@ -35,6 +36,7 @@ android {
     }
 }
 
+val room_version = "2.8.4"
 
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
@@ -46,6 +48,10 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
+    // Room
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
