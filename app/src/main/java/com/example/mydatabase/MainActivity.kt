@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -19,7 +19,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.example.mydatabase.tareas.ScreenTareas
+import com.example.mydatabase.gowayki.ScreenRecorridos
 import com.example.mydatabase.ui.theme.MyDatabaseTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyDatabaseTheme {
-                // 0 = usuarios (parte guiada y ejercicio 1), 1 = tareas (ejercicio 2)
+                // 0 = usuarios (parte guiada y ejercicio 1), 1 = recorridos de GoWayki (ejercicio 2)
                 var pestana by rememberSaveable { mutableIntStateOf(0) }
                 Scaffold(
                     bottomBar = {
@@ -42,14 +42,14 @@ class MainActivity : ComponentActivity() {
                             NavigationBarItem(
                                 selected = pestana == 1,
                                 onClick = { pestana = 1 },
-                                icon = { Icon(Icons.Default.CheckCircle, contentDescription = null) },
-                                label = { Text("Tareas") }
+                                icon = { Icon(Icons.Default.Place, contentDescription = null) },
+                                label = { Text("Recorridos") }
                             )
                         }
                     }
                 ) { innerPadding ->
                     Box(Modifier.padding(bottom = innerPadding.calculateBottomPadding())) {
-                        if (pestana == 0) ScreenUser() else ScreenTareas()
+                        if (pestana == 0) ScreenUser() else ScreenRecorridos()
                     }
                 }
             }
