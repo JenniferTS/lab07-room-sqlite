@@ -10,7 +10,7 @@ Proyecto **DatosSinMVVM** hecho con Kotlin, Jetpack Compose y Room.
 |---|---|---|
 | Parte guiada | Agregar y listar usuarios en SQLite con Room | `User.kt`, `UserDao.kt`, `UserDatabase.kt`, `ScreenUser.kt` |
 | Ejercicio 1 | Eliminar el último usuario y mover las acciones a un TopAppBar dentro de un Scaffold | `UserDao.kt`, `ScreenUser.kt` |
-| Ejercicio 2 | CRUD de la vista "Nueva tarea" del proyecto final | `tareas/Tarea.kt`, `tareas/TareaDao.kt`, `tareas/AppDatabase.kt`, `tareas/ScreenTareas.kt` |
+| Ejercicio 2 | CRUD de la vista "Mis recorridos" de GoWayki, mi proyecto final (transporte público de Arequipa) | `gowayki/Recorrido.kt`, `gowayki/RecorridoDao.kt`, `gowayki/GoWaykiDatabase.kt`, `gowayki/ScreenRecorridos.kt` |
 
 Cada parte tiene un tag: `parte-guiada`, `ejercicio1-eliminar`, `ejercicio1-scaffold`, `ejercicio2-crud`.
 
@@ -21,7 +21,7 @@ Cada parte tiene un tag: `parte-guiada`, `ejercicio1-eliminar`, `ejercicio1-scaf
 | ![](docs/capturas/guiada.png) | ![](docs/capturas/ej1_scaffold.png) |
 
 ![Eliminar último](docs/capturas/ej1_eliminar.png)
-![CRUD tareas](docs/capturas/ej2_crud.png)
+![CRUD Mis recorridos de GoWayki](docs/capturas/ej2_crud.png)
 
 ## Notas
 
